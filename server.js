@@ -7,6 +7,10 @@ const { Server } = require("socket.io");
 const io = new Server(server);
 // ===================
 
+// TO START SERVER: 
+// nodemon server.js
+// then go to localhost:6567 (or whatever the port is)
+
 // Using port 6567, can change to whatever
 // process.env.PORT is a variable set by hosting services (not used rn)
 const port = process.env.PORT || 6567;
