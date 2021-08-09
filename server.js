@@ -18,12 +18,6 @@ server.listen(port, () => {
     console.log(`Listening on port ${port}`)
 });
 
-app.use('/client',express.static(__dirname + '/client'));
-
-app.get('/',function(req,res){
-    res.sendFile(__dirname+'/client/index.html');
-});
-
 // Whenever a client connects
 io.on('connection', socket => {
     console.log(`ID: ${socket.id} has joined.`);
