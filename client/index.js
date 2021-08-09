@@ -2,7 +2,7 @@ import Menu from "./scenes/menu";
 import Phaser from "./phaser.js";
 
 // start the websocket, automatically connects to the current URL + the port
-var socket = io();
+var socket = io("http://localhost:6567");
 
 var game = new Phaser.Game({
     type: Phaser.AUTO,
