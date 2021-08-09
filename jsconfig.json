@@ -1,0 +1,6 @@
+{
+  "typeAcquisition": {
+    "include": []
+  },
+  "exclude": ["node_modules/**/*"]
+}

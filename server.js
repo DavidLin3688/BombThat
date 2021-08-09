@@ -18,8 +18,11 @@ server.listen(port, () => {
     console.log(`Listening on port ${port}`)
 });
 
-// Use client folder. Automatically uses index.html
-app.use(express.static(__dirname + '/client'));
+app.use('/client',express.static(__dirname + '/client'));
+
+app.get('/',function(req,res){
+    res.sendFile(__dirname+'/client/index.html');
+});
 
 // Whenever a client connects
 io.on('connection', socket => {

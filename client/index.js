@@ -1,9 +1,7 @@
-import Phaser from 'phaser'
 // start the websocket, automatically connects to the current URL + the port
 var socket = io();
 
-// TODO: Phaser canvas
-var config = {
+var game = new Phaser.Game({
     type: Phaser.AUTO,
     width: 800,
     height: 600,
@@ -12,11 +10,5 @@ var config = {
         arcade: {
             gravity: { y: 200 }
         }
-    },
-    scene: {
-        preload: preload,
-        create: create
     }
-};
-
-var game = new Phaser.Game(config);
+});
