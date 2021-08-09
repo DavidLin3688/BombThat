@@ -3,8 +3,9 @@ var socket = io();
 
 var game = new Phaser.Game({
     type: Phaser.AUTO,
-    width: 800,
-    height: 600,
+    width: 640,
+    height: 480,
+    parent: "gameDiv",
     physics: {
         default: 'arcade',
         arcade: {
